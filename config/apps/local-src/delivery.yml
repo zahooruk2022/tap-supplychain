@@ -17,10 +17,10 @@ spec:
   template:
     metadata:
       annotations:
-        apps.tanzu.vmware.com/correlationid: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-busy-badger/lsp:apps-local-src?sub_path=/
+        apps.tanzu.vmware.com/correlationid: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-chipper-sable/lsp:apps-local-src?sub_path=/
         autoscaling.knative.dev/minScale: "1"
         boot.spring.io/actuator: http://:8081/actuator
-        boot.spring.io/version: 2.7.18
+        boot.spring.io/version: 3.2.2
         conventions.carto.run/applied-conventions: |-
           spring-boot-convention/auto-configure-actuators-check
           spring-boot-convention/is-native-app-check
@@ -33,7 +33,7 @@ spec:
           spring-boot-convention/app-live-view-connector-boot
           spring-boot-convention/app-live-view-appflavours-boot
         developer.conventions/target-containers: workload
-        local-source-proxy.apps.tanzu.vmware.com: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-busy-badger/lsp:apps-local-src@sha256:c6f945b2c369d5df5c34cc841e15341850cc528737af74e17286d90d8bbe7384
+        local-source-proxy.apps.tanzu.vmware.com: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-chipper-sable/lsp:apps-local-src@sha256:5d6ce937b7b7ef231de135cc3cf8e09e2aea35951e42dd85e1c8a00ad3d84d1c
       labels:
         app.kubernetes.io/component: run
         app.kubernetes.io/part-of: local-src
@@ -52,7 +52,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-busy-badger/local-src-apps@sha256:85d5518ced66302b0ba84fbf19837dd6da06c60c3199e19eca27e7bf33df275b
+        image: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-chipper-sable/local-src-apps@sha256:00699becf13862b6f49256d33416b58052d16bce121e3f83839ec0fd9bf93147
         livenessProbe:
           httpGet:
             path: /livez
