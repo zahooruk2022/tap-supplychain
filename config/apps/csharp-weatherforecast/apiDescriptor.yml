@@ -3,7 +3,7 @@ kind: APIDescriptor
 metadata:
   name: csharp-weatherforecast
   annotations:
-    local-source-proxy.apps.tanzu.vmware.com: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-csharp-weatherforecast@sha256:3216a81328b69670675309591dd701aa26b8f6343550d10cf9a341c5153dfd7e
+    local-source-proxy.apps.tanzu.vmware.com: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-csharp-weatherforecast@sha256:289428fea57960c6992893be1d92c9d4d966927a3ab0f9d89e8a26a41d9a609b
     autoscaling.knative.dev/minScale: "1"
   labels:
     apis.apps.tanzu.vmware.com/register-api: "true"
