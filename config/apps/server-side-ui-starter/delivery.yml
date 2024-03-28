@@ -40,7 +40,7 @@ spec:
           spring-boot-convention/app-live-view-appflavours-boot
         developer.apps.tanzu.vmware.com/image-source-digest: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-server-side-ui-starter@sha256:1f399f3000df90e50c287e680fab2eaa841f73933e8b9216614722c2d7ed6455
         developer.conventions/target-containers: workload
-        local-source-proxy.apps.tanzu.vmware.com: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-server-side-ui-starter@sha256:6f233f1e438d6b714a1f5feb34914bcb5c49bbd28b4661380f60d640740a2b1f
+        local-source-proxy.apps.tanzu.vmware.com: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-server-side-ui-starter@sha256:1f399f3000df90e50c287e680fab2eaa841f73933e8b9216614722c2d7ed6455
       labels:
         app.kubernetes.io/component: run
         app.kubernetes.io/part-of: server-side-ui-starter
