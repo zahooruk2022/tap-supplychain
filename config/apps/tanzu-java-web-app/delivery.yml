@@ -38,9 +38,9 @@ spec:
           spring-boot-convention/app-live-view-appflavour-check
           spring-boot-convention/app-live-view-connector-boot
           spring-boot-convention/app-live-view-appflavours-boot
-        developer.apps.tanzu.vmware.com/image-source-digest: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-tanzu-java-web-app@sha256:407e119b34a9b20de6371fba5a07094a6c233ef364076dabfe849321636d0cb1
+        developer.apps.tanzu.vmware.com/image-source-digest: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-tanzu-java-web-app@sha256:fe6f3226af3b101c88953bf292f3d377caf539dcb4d9ece2542ec13dfb1bf49f
         developer.conventions/target-containers: workload
-        local-source-proxy.apps.tanzu.vmware.com: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-tanzu-java-web-app@sha256:407e119b34a9b20de6371fba5a07094a6c233ef364076dabfe849321636d0cb1
+        local-source-proxy.apps.tanzu.vmware.com: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-tanzu-java-web-app@sha256:fe6f3226af3b101c88953bf292f3d377caf539dcb4d9ece2542ec13dfb1bf49f
       labels:
         app.kubernetes.io/component: run
         app.kubernetes.io/part-of: tanzu-java-web-app
@@ -63,7 +63,7 @@ spec:
           value: "9005"
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/tanzu-java-web-app-apps@sha256:6d489e7662764e23d3f9fee69a96683dbca13cf2d12d60000705e8b23d5bd5af
+        image: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/tanzu-java-web-app-apps@sha256:d9fb2f658ecdcdf78f24a876e455d093a44ce855fac587b34d13be9f5f5d54d8
         livenessProbe:
           httpGet:
             path: /livez
