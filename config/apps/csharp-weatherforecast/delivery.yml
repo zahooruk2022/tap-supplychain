@@ -7,6 +7,7 @@ metadata:
     ootb.apps.tanzu.vmware.com/apidescriptor-ref: "true"
     kapp.k14s.io/change-rule: upsert after upserting servicebinding.io/ServiceBindings
   labels:
+    apis.apps.tanzu.vmware.com/register-api: "true"
     app.kubernetes.io/part-of: csharp-weatherforecast
     apps.tanzu.vmware.com/has-tests: "true"
     apps.tanzu.vmware.com/workload-type: web
@@ -32,10 +33,11 @@ spec:
           spring-boot-convention/auto-configure-actuators-check
           spring-boot-convention/is-native-app-check
           spring-boot-convention/app-live-view-appflavour-check
-        developer.apps.tanzu.vmware.com/image-source-digest: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-csharp-weatherforecast@sha256:ab43b1463673eaafc99b5581996195d30910ee03ae72e6da01d32aab1513b7b3
+        developer.apps.tanzu.vmware.com/image-source-digest: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-csharp-weatherforecast@sha256:3216a81328b69670675309591dd701aa26b8f6343550d10cf9a341c5153dfd7e
         developer.conventions/target-containers: workload
-        local-source-proxy.apps.tanzu.vmware.com: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-csharp-weatherforecast@sha256:ab43b1463673eaafc99b5581996195d30910ee03ae72e6da01d32aab1513b7b3
+        local-source-proxy.apps.tanzu.vmware.com: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-csharp-weatherforecast@sha256:3216a81328b69670675309591dd701aa26b8f6343550d10cf9a341c5153dfd7e
       labels:
+        apis.apps.tanzu.vmware.com/register-api: "true"
         app.kubernetes.io/component: run
         app.kubernetes.io/part-of: csharp-weatherforecast
         apps.tanzu.vmware.com/has-tests: "true"
@@ -46,7 +48,7 @@ spec:
         tanzu.app.live.view.application.name: csharp-weatherforecast
     spec:
       containers:
-      - image: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/csharp-weatherforecast-apps@sha256:b6cfcf20e02ea6831bb375cfc5a530f9e4f37eed0b3344a2389f1230826c0078
+      - image: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/csharp-weatherforecast-apps@sha256:d8bf44e3bfa3aeb91874fe08fbd7ce518fced51dfaf19abdd48e3d0f8da0f2ec
         name: workload
         resources: {}
         securityContext:
