@@ -20,7 +20,7 @@ spec:
   template:
     metadata:
       annotations:
-        apps.tanzu.vmware.com/correlationid: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-csharp-weatherforecast?sub_path=/
+        apps.tanzu.vmware.com/correlationid: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-relaxed-oribi/lsp:apps-csharp-weatherforecast?sub_path=/
         apps.tanzu.vmware.com/debug: "true"
         apps.tanzu.vmware.com/live-update: "true"
         autoscaling.knative.dev/maxScale: "1"
@@ -33,9 +33,9 @@ spec:
           spring-boot-convention/auto-configure-actuators-check
           spring-boot-convention/is-native-app-check
           spring-boot-convention/app-live-view-appflavour-check
-        developer.apps.tanzu.vmware.com/image-source-digest: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-csharp-weatherforecast@sha256:289428fea57960c6992893be1d92c9d4d966927a3ab0f9d89e8a26a41d9a609b
+        developer.apps.tanzu.vmware.com/image-source-digest: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-relaxed-oribi/lsp:apps-csharp-weatherforecast@sha256:289428fea57960c6992893be1d92c9d4d966927a3ab0f9d89e8a26a41d9a609b
         developer.conventions/target-containers: workload
-        local-source-proxy.apps.tanzu.vmware.com: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/lsp:apps-csharp-weatherforecast@sha256:289428fea57960c6992893be1d92c9d4d966927a3ab0f9d89e8a26a41d9a609b
+        local-source-proxy.apps.tanzu.vmware.com: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-relaxed-oribi/lsp:apps-csharp-weatherforecast@sha256:289428fea57960c6992893be1d92c9d4d966927a3ab0f9d89e8a26a41d9a609b
       labels:
         apis.apps.tanzu.vmware.com/register-api: "true"
         app.kubernetes.io/component: run
@@ -48,7 +48,7 @@ spec:
         tanzu.app.live.view.application.name: csharp-weatherforecast
     spec:
       containers:
-      - image: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-quick-guanaco/csharp-weatherforecast-apps@sha256:c38857f3ed116ce56dad33262c8634fceb705e3a2393021b14756f6fbedaf01f
+      - image: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv2-relaxed-oribi/csharp-weatherforecast-apps@sha256:d8220fd328be6dfe45fa588c1e6964efa0662f20fc7a5d26ce92d464ceef1847
         name: workload
         resources: {}
         securityContext:
