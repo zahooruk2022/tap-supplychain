@@ -17,7 +17,7 @@ spec:
   template:
     metadata:
       annotations:
-        apps.tanzu.vmware.com/correlationid: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv2-fearless-quoll/lsp:apps-tanzu-java-web-app?sub_path=/
+        apps.tanzu.vmware.com/correlationid: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv2-comedic-emu/lsp:apps-tanzu-java-web-app?sub_path=/
         apps.tanzu.vmware.com/debug: "true"
         apps.tanzu.vmware.com/live-update: "true"
         autoscaling.knative.dev/maxScale: "1"
@@ -39,9 +39,9 @@ spec:
           spring-boot-convention/app-live-view-appflavour-check
           spring-boot-convention/app-live-view-connector-boot
           spring-boot-convention/app-live-view-appflavours-boot
-        developer.apps.tanzu.vmware.com/image-source-digest: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv2-fearless-quoll/lsp:apps-tanzu-java-web-app@sha256:6202c03dd3bf432bddf6710c7c8933696ab4f9a3f3a2b87fe886576735d411de
+        developer.apps.tanzu.vmware.com/image-source-digest: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv2-comedic-emu/lsp:apps-tanzu-java-web-app@sha256:6202c03dd3bf432bddf6710c7c8933696ab4f9a3f3a2b87fe886576735d411de
         developer.conventions/target-containers: workload
-        local-source-proxy.apps.tanzu.vmware.com: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv2-fearless-quoll/lsp:apps-tanzu-java-web-app@sha256:6202c03dd3bf432bddf6710c7c8933696ab4f9a3f3a2b87fe886576735d411de
+        local-source-proxy.apps.tanzu.vmware.com: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv2-comedic-emu/lsp:apps-tanzu-java-web-app@sha256:6202c03dd3bf432bddf6710c7c8933696ab4f9a3f3a2b87fe886576735d411de
       labels:
         app.kubernetes.io/component: run
         app.kubernetes.io/part-of: tanzu-java-web-app
@@ -64,7 +64,7 @@ spec:
           value: "9005"
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv2-fearless-quoll/tanzu-java-web-app-apps@sha256:4427b8a097eb424310e6f1641aa16439bd1a546183aa240d591d6733a792d6e1
+        image: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv2-comedic-emu/tanzu-java-web-app-apps@sha256:e83240bad85d0ea55970393977f91c8925954f7808bd52b5ce340d925fe4b1a3
         livenessProbe:
           httpGet:
             path: /livez
